@@ -124,7 +124,7 @@ def AdjacencyMatricesOfDifferentOrders(FilePath, IndexFilePath):
                 adjacencyMatrices[order] = adjacency
             lastVertex = indexDict[path[-1]]
             lastSecondVertex = indexDict[path[-2]]
-            adjacencyMatrices[order][lastSecondVertex, lastVertex] = 1
+            adjacencyMatrices[order][lastSecondVertex, lastVertex] = order
         print("最高阶：%d" % len(adjacencyMatrices))
         return adjacencyMatrices
 
